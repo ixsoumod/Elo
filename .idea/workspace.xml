@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Elo:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfa40bbf-3913-4f42-bb7b-41e5cc882519" name="Changes" comment="" />
+    <list default="true" id="bfa40bbf-3913-4f42-bb7b-41e5cc882519" name="Changes" comment="Feat: Elo command">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Elo_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/utils/TabCompleteAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/utils/TabCompletePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/Elo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/Elo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,10 +59,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.ixsou.elo.utils" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="mcdev-temp-root" />
@@ -70,6 +94,19 @@
       <option name="presentableId" value="Default" />
       <updated>1741206346144</updated>
     </task>
+    <task id="LOCAL-00001" summary="Feat: Elo command">
+      <option name="closed" value="true" />
+      <created>1741207431684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741207431684</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feat: Elo command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: Elo command" />
   </component>
 </project>

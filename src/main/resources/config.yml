@@ -1,0 +1,27 @@
+no-found-message: "&cMessage introuvable !"
+no-permission: "&cVous n'avez pas la permission d'effectuer cette commande !"
+no-player: "&cLe joueur n'existe pas !"
+no-amount: "&cVeuillez entrer un montant valide !"
+no-args: "&cVeuillez entrer un joueur !"
+no-command: "&cCommande introuvable ! Fait /eloadmin help pour plus d'info."
+elo-give: "&aVous avez donné &e%amount% &apoints d'ELO à &e%player%&a !"
+elo-set: "&aVous avez défini les points d'ELO de &e%player% &aà &e%amount%&a !"
+elo-earn: "&aVous avez gagné &e%amount% &apoints d'ELO !"
+elo-get: "&aVous avez désormait &e%amount% &apoints d'ELO !"
+elo-loose: "&aVous avez perdu &e%amount% &apoints d'ELO !"
+elo-take: "&aVous avez retiré &e%amount% &apoints d'ELO à &e%player%&a !"
+elo-see: "&aLe joueur &e%player% &aa &e%amount% &apoints d'ELO !"
+elo-see-self: "&aVous avez &e%amount% &apoints d'ELO !"
+reload: "&aConfiguration rechargée !"
+#plugin
+plugin-enable: "&aLe plugin Elo est activé !"
+plugin-disable: "&cLe plugin Elo est désactivé !"
+#help
+help:
+    title: "&eELO &7- &aHelp"
+    commands:
+        1: "&a/eloadmin give <player> <amount> &7- &eDonner des points d'ELO à un joueur."
+        2: "&a/eloadmin set <player> <amount> &7- &eDéfinir les points d'ELO d'un joueur."
+        3: "&a/eloadmin take <player> <amount> &7- &eRetirer des points d'ELO à un joueur."
+        4: "&a/eloadmin reload &7- &eRecharger la configuration du plugin."
+        5: "&a/elo &7- &eVoir vos points d'ELO."
