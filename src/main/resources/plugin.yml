@@ -1,0 +1,10 @@
+name: Elo
+version: '1.0-SNAPSHOT'
+main: fr.ixsou.elo.Elo
+api-version: '1.21'
+authors: [ Ixsou_mod ]
+commands:
+  eloadmin:
+    description: Commande principale du plugin
+    usage: /admin <give|set|remove> <player> <amount>
+    permission: elo.admin
