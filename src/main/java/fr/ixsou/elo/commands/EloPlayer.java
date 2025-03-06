@@ -17,9 +17,13 @@ public class EloPlayer implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, @NotNull String[] args) {
-        Player player = (Player) sender;
-
         if (args.length == 0) {
+            if (!(sender instanceof Player)) {
+                sender.sendMessage(plugin.getMessage("elo-only-player-can-see"));
+                return true;
+            }
+
+            Player player = (Player) sender;
             sender.sendMessage(plugin.getMessage("elo-see-self").replace("%amount%", String.valueOf(plugin.getElo(player))));
             return true;
         }
@@ -38,6 +42,5 @@ public class EloPlayer implements CommandExecutor {
             sender.sendMessage(plugin.getMessage("no-command"));
             return true;
         }
-
     }
 }

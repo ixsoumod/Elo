@@ -17,76 +17,99 @@ public class EloAdmin implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, @NotNull String[] args) {
-        Player player = (Player) sender;
-
         if (args.length < 1) {
             sender.sendMessage(plugin.getMessage("no-command"));
             return true;
         }
 
-        if (args[0].equalsIgnoreCase("give")){
-            if (args.length < 3){
+        if (args[0].equalsIgnoreCase("give")) {
+            if (args.length < 3) {
                 sender.sendMessage(plugin.getMessage("no-amount"));
                 return true;
             }
-            Player target = player.getServer().getPlayer(args[1]);
-            if (target == null){
+            Player target = plugin.getServer().getPlayer(args[1]);
+            if (target == null) {
                 sender.sendMessage(plugin.getMessage("no-player"));
                 return true;
             }
-            int amount = Integer.parseInt(args[2]);
-            target.sendMessage(plugin.getMessage("elo-earn").replace("%amount%", String.valueOf(amount)).replace("%player%", player.getName()));
+
+            int amount;
+            try {
+                amount = Integer.parseInt(args[2]);
+            } catch (NumberFormatException e) {
+                sender.sendMessage(plugin.getMessage("no-amount"));
+                return true;
+            }
+
+            target.sendMessage(plugin.getMessage("elo-earn").replace("%amount%", String.valueOf(amount)).replace("%player%", sender.getName()));
             sender.sendMessage(plugin.getMessage("elo-give").replace("%amount%", String.valueOf(amount)).replace("%player%", target.getName()));
             plugin.getConfig().set("players." + target.getUniqueId() + ".elo", plugin.getConfig().getInt("players." + target.getUniqueId() + ".elo") + amount);
             plugin.saveConfig();
+        }
 
-        } else if (args[0].equalsIgnoreCase("take")){
-            if (args.length < 3){
-                sender.sendMessage(plugin.getMessage("no-command"));
-                return true;
-            }
-            Player target = player.getServer().getPlayer(args[1]);
-            if (target == null){
-                sender.sendMessage(plugin.getMessage("no-player"));
-                return true;
-            }
-            int amount = Integer.parseInt(args[2]);
-            target.sendMessage(plugin.getMessage("elo-loose").replace("%amount%", String.valueOf(amount)).replace("%player%", player.getName()));
-            sender.sendMessage(plugin.getMessage("elo-take").replace("%amount%", String.valueOf(amount)).replace("%player%", target.getName()));
-            plugin.getConfig().set("players." + target.getUniqueId() + ".elo", plugin.getConfig().getInt("players." + target.getUniqueId() + ".elo") - amount);
-            plugin.saveConfig();
-
-        } else if (args[0].equalsIgnoreCase("set")){
-            if (args.length < 3){
+        else if (args[0].equalsIgnoreCase("take")) {
+            if (args.length < 3) {
                 sender.sendMessage(plugin.getMessage("no-amount"));
                 return true;
             }
-            Player target = player.getServer().getPlayer(args[1]);
-            if (target == null){
+            Player target = plugin.getServer().getPlayer(args[1]);
+            if (target == null) {
                 sender.sendMessage(plugin.getMessage("no-player"));
                 return true;
             }
-            int amount = Integer.parseInt(args[2]);
-            target.sendMessage(plugin.getMessage("elo-get").replace("%amount%", String.valueOf(amount)).replace("%player%", player.getName()));
+
+            int amount;
+            try {
+                amount = Integer.parseInt(args[2]);
+            } catch (NumberFormatException e) {
+                sender.sendMessage(plugin.getMessage("no-amount"));
+                return true;
+            }
+
+            target.sendMessage(plugin.getMessage("elo-loose").replace("%amount%", String.valueOf(amount)).replace("%player%", sender.getName()));
+            sender.sendMessage(plugin.getMessage("elo-take").replace("%amount%", String.valueOf(amount)).replace("%player%", target.getName()));
+            plugin.getConfig().set("players." + target.getUniqueId() + ".elo", plugin.getConfig().getInt("players." + target.getUniqueId() + ".elo") - amount);
+            plugin.saveConfig();
+        }
+
+        else if (args[0].equalsIgnoreCase("set")) {
+            if (args.length < 3) {
+                sender.sendMessage(plugin.getMessage("no-amount"));
+                return true;
+            }
+            Player target = plugin.getServer().getPlayer(args[1]);
+            if (target == null) {
+                sender.sendMessage(plugin.getMessage("no-player"));
+                return true;
+            }
+
+            int amount;
+            try {
+                amount = Integer.parseInt(args[2]);
+            } catch (NumberFormatException e) {
+                sender.sendMessage(plugin.getMessage("no-amount"));
+                return true;
+            }
+
+            target.sendMessage(plugin.getMessage("elo-get").replace("%amount%", String.valueOf(amount)).replace("%player%", sender.getName()));
             sender.sendMessage(plugin.getMessage("elo-set").replace("%amount%", String.valueOf(amount)).replace("%player%", target.getName()));
             plugin.getConfig().set("players." + target.getUniqueId() + ".elo", amount);
             plugin.saveConfig();
+        }
 
-        } else if (args[0].equalsIgnoreCase("help")){
+        else if (args[0].equalsIgnoreCase("help")) {
             sender.sendMessage(plugin.getMessage("help.title"));
             sender.sendMessage(plugin.getMessage("help.commands.1"));
             sender.sendMessage(plugin.getMessage("help.commands.2"));
             sender.sendMessage(plugin.getMessage("help.commands.3"));
             sender.sendMessage(plugin.getMessage("help.commands.4"));
             sender.sendMessage(plugin.getMessage("help.commands.5"));
-
         }
+
         else if (args[0].equalsIgnoreCase("reload")) {
             plugin.reloadConfig();
             sender.sendMessage(plugin.getMessage("reload"));
-
         }
-
 
         return true;
     }

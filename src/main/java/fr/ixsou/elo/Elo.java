@@ -2,10 +2,12 @@ package fr.ixsou.elo;
 
 import fr.ixsou.elo.commands.EloAdmin;
 import fr.ixsou.elo.commands.EloPlayer;
+import fr.ixsou.elo.events.Events;
 import fr.ixsou.elo.utils.TabCompleteAdmin;
 import fr.ixsou.elo.utils.TabCompletePlayer;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Elo extends JavaPlugin {
@@ -19,8 +21,14 @@ public final class Elo extends JavaPlugin {
         getCommand("elo").setTabCompleter(new TabCompletePlayer(this));
         getCommand("elo").setExecutor(new EloPlayer(this));
 
+        registerEvents(new Events(this));
+
         getLogger().info("§aPlugin Elo activé !");
 
+    }
+
+    private void registerEvents(Events events) {
+        getServer().getPluginManager().registerEvents(events, this);
     }
 
     @Override
@@ -48,4 +56,5 @@ public final class Elo extends JavaPlugin {
 
         return getMessage("no-found-message");
     }
+
 }

@@ -10,15 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfa40bbf-3913-4f42-bb7b-41e5cc882519" name="Changes" comment="Feat: Elo command">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Elo_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/utils/TabCompleteAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/utils/TabCompletePlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/events/Events.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/Elo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/Elo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/ixsou/elo/commands/EloPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,21 +32,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ixsoumod"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ixsoumod&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ixsoumod/Elo.git",
-    "accountId": "071ebddf-9203-4c3e-bbaa-3fbb0392162e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ixsoumod/Elo.git&quot;,
+    &quot;accountId&quot;: &quot;071ebddf-9203-4c3e-bbaa-3fbb0392162e&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2tueMymSCtb8mVFOG3fI1OwLC5A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -60,11 +57,17 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -85,6 +88,14 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,6 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741206346144</updated>
+      <workItem from="1741269994478" duration="3614000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Elo command">
       <option name="closed" value="true" />
@@ -104,6 +116,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Feat: Elo command" />
